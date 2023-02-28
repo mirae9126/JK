@@ -15,4 +15,4 @@ elif select == 2 :
         answer = answer + i
     print("%d+...+%d는 %d입니다. " %(num1, num2, answer))
 else :
-    print("1 또는 2만 입력해야 합니다.")
+    print("위 코드에서는 1 또는 2만 입력해야 합니다.")
