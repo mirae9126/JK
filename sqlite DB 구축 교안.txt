@@ -1,0 +1,24 @@
+SQLite version 3.39.4 2022-09-29 15:55:41
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open naverDB
+sqlite> CREATE TABLE userTable(id char(4), userName char(15), email char(15), birthYear int);
+sqlite> .table
+userTable
+sqlite> .schema userTable
+CREATE TABLE userTable(id char(4), userName char(15), email char(15), birthYear int);
+sqlite> INSERT INTO userTable VALUES('john','John Bann', 'john@naver.com', 1990);
+sqlite> INSERT INTO userTable VALUES('kim','Kim Chi', 'kim@naver.com', 1992);
+sqlite> INSERT INTO userTable VALUES('lee','Lee Pal', 'lee@naver.com', 1988);
+sqlite> INSERT INTO userTable VALUES('park','Park Su', 'park@naver.com', 1980);
+sqlite> .header on
+sqlite> .mode column
+sqlite> SELECT * FROM userTable;
+id    userName   email           birthYear
+----  ---------  --------------  ---------
+john  John Bann  john@naver.com  1990
+kim   Kim Chi    kim@naver.com   1992
+lee   Lee Pal    lee@naver.com   1988
+park  Park Su    park@naver.com  1980
+sqlite>
